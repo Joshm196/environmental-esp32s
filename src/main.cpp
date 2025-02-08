@@ -1,10 +1,17 @@
 #include <Arduino.h>
+#define LED 16
 
 void setup() {
   // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  pinMode(LED,OUTPUT);
+  Serial.begin(115200);
+
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  digitalWrite(LED, HIGH);
+  delay(1000);
+  digitalWrite(LED, LOW);
+  delay(1000);
 }
